@@ -1,15 +1,24 @@
 import { useParams, Link } from "react-router-dom";
 
-import Animais1 from "../../../assets/categorias/animais/AbelhaEmFibra.jpg";
-import Animais2 from "../../../assets/categorias/animais/BoisNaCarroceria.jpg";
-import Animais3 from "../../../assets/categorias/animais/DinossauroEmFibra.jpg";
-import Animais4 from "../../../assets/categorias/animais/DinossauroTemático.jpg";
-import Animais5 from "../../../assets/categorias/animais/EsculturaDeBode.jpg";
-import Animais6 from "../../../assets/categorias/animais/GrupoDinossaurosEmFibra.jpg";
-import Animais7 from "../../../assets/categorias/animais/LeãoDetalhado.jpg";
-import Animais8 from "../../../assets/categorias/animais/NinhoDeArara.jpg";
-import Animais9 from "../../../assets/categorias/animais/PapagaioFeliz.jpg";
-import Animais10 from "../../../assets/categorias/animais/PinturaArtisticaElefante.jpg";
+import Brinquedos1 from "../../../assets/categorias/brinquedos/Baleia.jpg";
+import Brinquedos2 from "../../../assets/categorias/brinquedos/CapsulaDourada.jpg";
+import Brinquedos3 from "../../../assets/categorias/brinquedos/CavaloCarrossel.jpg";
+import Brinquedos4 from "../../../assets/categorias/brinquedos/EscorregaDino.jpg";
+import Brinquedos5 from "../../../assets/categorias/brinquedos/EscorregadorCurl.jpg";
+import Brinquedos6 from "../../../assets/categorias/brinquedos/EscorregadorMorango.jpg";
+import Brinquedos7 from "../../../assets/categorias/brinquedos/EscorregaSapo.jpg";
+import Brinquedos8 from "../../../assets/categorias/brinquedos/Foca.jpg";
+import Brinquedos9 from "../../../assets/categorias/brinquedos/FormigaEmFibra.jpg";
+import Brinquedos10 from "../../../assets/categorias/brinquedos/GangorraEmFibra.jpg";
+import Brinquedos11 from "../../../assets/categorias/brinquedos/Golfinhos.jpg";
+import Brinquedos12 from "../../../assets/categorias/brinquedos/MickeyeMiney.jpg";
+import Brinquedos13 from "../../../assets/categorias/brinquedos/MóduloCircular.jpg";
+import Brinquedos14 from "../../../assets/categorias/brinquedos/Playground.jpg";
+import Brinquedos15 from "../../../assets/categorias/brinquedos/PlaygroundEmFibra.jpg";
+import Brinquedos16 from "../../../assets/categorias/brinquedos/RinoceronteDeFibra.jpg";
+import Brinquedos17 from "../../../assets/categorias/brinquedos/Tubarão.jpg";
+import Brinquedos18 from "../../../assets/categorias/brinquedos/TúnelDeFibra.jpg";
+import Brinquedos19 from "../../../assets/categorias/brinquedos/XicaraEmFibra.jpg";
 
 interface DadosProduto {
   nome: string;
@@ -21,86 +30,158 @@ interface DadosProduto {
 }
 
 const ESPECIFICACOES_PRODUTOS: Record<string, DadosProduto> = {
-  "abelha-em-fibra": {
-    nome: "Abelha em Fibra",
-    imagem: Animais1,
+  "escorrega-da-baleia": {
+    nome: "Escorrega da Baleia",
+    imagem: Brinquedos1,
     material: "Resina leve reforçada com manta de fibra de vidro de alta resistência.",
     acabamento: "Pintura artística manual fina com tintas acrílicas premium e proteção de verniz.",
     garantia: "Garantia estrutural de fábrica com suporte técnico especializado e peças de reposição.",
     indicacao: "Jardins botânicos, apiários, fachadas de comércios de mel, escolas e eventos ecológicos."
   },
-  "bois-na-carroceria": {
-    nome: "Bois na Carroceria",
-    imagem: Animais2,
+  "capsula-dourada": {
+    nome: "Capsúla Dourada",
+    imagem: Brinquedos2,
     material: "Composto laminado de fibra de vidro estrutural com alta densidade de resina ortoftálica.",
     acabamento: "Selamento de superfície em gelcoat e pintura automotiva fosca simulando texturas naturais.",
     garantia: "Garantia estendida contra trincas estruturais causadas por trepidações em transporte.",
     indicacao: "Entradas de fazendas, decoração de churrascarias, feiras agropecuárias e cenografias sertanejas."
   },
-  "dinossauro-em-fibra": {
-    nome: "Dinossauro em Fibra de Vidro",
-    imagem: Animais3,
+  "cavalo-carrossel": {
+    nome: "Cavalo Carrossel",
+    imagem: Brinquedos3,
     material: "Manta e tecido de fibra de vidro estrutural envoltos em resina catalisada reforçada.",
     acabamento: "Texturização artística epidérmica realista com acabamento em verniz PU fosco anti-UV.",
     garantia: "Homologação estrutural com laudo técnico de estabilidade e segurança física.",
     indicacao: "Parques temáticos, resorts, playgrounds de alto padrão e centros de entretenimento."
   },
-  "dinossauro-tematico": {
-    nome: "Dinossauro Temático",
-    imagem: Animais4,
+  "escorrega-do-dinossauro": {
+    nome: "Escorrega do Dinossauro",
+    imagem: Brinquedos4,
     material: "Fibra de vidro laminada com acabamento liso flexível para contornos complexos.",
     acabamento: "Pintura artística personalizada com cores vibrantes e selador acrílico de alta vedação.",
     garantia: "Suporte completo contra intempéries climáticas e proteção cromática de alta durabilidade.",
     indicacao: "Buffets infantis, fachadas comerciais lúdicas, lojas de brinquedos e áreas de fotos (instagramável)."
   },
-  "escultura-de-bode": {
-    nome: "Escultura de Bode",
-    imagem: Animais5,
+  "escorregador-curl": {
+    nome: "Escorregador Curl",
+    imagem: Brinquedos5,
     material: "Resina poliéster reforçada com fibra de vidro texturizada.",
     acabamento: "Escultura com replicação minuciosa de pelagem e chifres através de pintura automotiva e aerografia.",
     garantia: "Garantia total de fábrica com tratamento especial contra umidade severa e radiação UV.",
     indicacao: "Exposições agrícolas, fazendas boutique, decoração de restaurantes rústicos e cenários teatrais."
   },
-  "grupo-dinossauros-em-fibra": {
-    nome: "Grupo Dinossauros em Fibra",
-    imagem: Animais6,
+  "escorregador-morango": {
+    nome: "Escorregador Morango",
+    imagem: Brinquedos6,
     material: "Sistemas complexos de laminação de fibra de vidro com espessuras calibradas para grandes volumes.",
     acabamento: "Pintura artística integrada em lote para uniformidade visual do conjunto, com selante de alto tráfego.",
     garantia: "Acompanha manual de içamento logístico seguro e garantia estendida de projeto corporativo.",
     indicacao: "Praças públicas, rotatórias urbanas, museus de história natural abertos e mega atrações turísticas."
   },
-  "leao-detalhado": {
-    nome: "Leão Detalhado",
-    imagem: Animais7,
+  "escorrega-do-sapo": {
+    nome: "Escorrega do Sapo",
+    imagem: Brinquedos7,
     material: "Fibra de vidro de engenharia avançada moldada sob matrizes de altíssima definição anatômica.",
     acabamento: "Pintura em multicamadas cromáticas realistas e revestimento com verniz automotivo premium.",
     garantia: "Garantia premium contra descascamento e blindagem química para exposição solar contínua.",
     indicacao: "Pórticos de entrada, fachadas corporativas premium, condomínios fechados e zoológicos."
   },
-  "ninho-de-araras": {
-    nome: "Ninho de Araras",
-    imagem: Animais8,
+  "gangorra-da-foca": {
+    nome: "Gangorra da Foca",
+    imagem: Brinquedos8,
     material: "Compósito leve de fibra de vidro acoplado a resinas ecológicas de alta aderência.",
     acabamento: "Policromia viva simulando a fauna brasileira com finalização em verniz poliuretano fosco.",
     garantia: "Proteção biológica total integrada (100% imune a fungos, cupins ou apodrecimento).",
     indicacao: "Hotéis fazenda, áreas de preservação ambiental, receptivos turísticos e decorações tropicais."
   },
-  "papagaio-feliz": {
-    nome: "Papagaio Feliz",
-    imagem: Animais9,
+  "formiga-em-fibra": {
+    nome: "Formiga em Fibra",
+    imagem: Brinquedos9,
     material: "Fibra de vidro injetada com resinas flexíveis, garantindo leveza e ótima resistência estrutural.",
     acabamento: "Pintura decorativa de alto brilho com pigmentos puros que bloqueiam o desbotamento solar.",
     garantia: "Suporte técnico para projetos de ancoragem suspensa em troncos ou estruturas aéreas.",
     indicacao: "Quiosques, pet shops, parques aquáticos, áreas de lazer residenciais e lanchonetes de praia."
   },
-  "pintura-artistica-elefante": {
-    nome: "Pintura Artística Elefante",
-    imagem: Animais10,
+  "gangorra-em-fibra": {
+    nome: "Gangorra em Fibra",
+    imagem: Brinquedos10,
     material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
     acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
     garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
     indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
-  }
+  },
+  "golfinho-em-fibra": {
+    nome: "Golfinho em Fibra",
+    imagem: Brinquedos11,
+    material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
+    acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
+    garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
+    indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
+  },
+  "modulo-circular": {
+    nome: "Módulo Circular",
+    imagem: Brinquedos12,
+    material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
+    acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
+    garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
+    indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
+  },
+  "playground-em-fibra": {
+    nome: "Playground em Fibra",
+    imagem: Brinquedos13,
+    material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
+    acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
+    garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
+    indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
+  },
+  "playground-em-fibra-modelo-2": {
+    nome: "Playground em Fibra Modelo 2",
+    imagem: Brinquedos14,
+    material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
+    acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
+    garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
+    indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
+  },
+  "rinocerount-em-fibra": {
+    nome: "Rinocerounte em Fibra",
+    imagem: Brinquedos15,
+    material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
+    acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
+    garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
+    indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
+  },
+  "tubarao-em-fibra": {
+    nome: "Tubarão em Fibra",
+    imagem: Brinquedos16,
+    material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
+    acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
+    garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
+    indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
+  },
+  "tunel-de-playground": {
+    nome: "Túnel de Playground",
+    imagem: Brinquedos17,
+    material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
+    acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
+    garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
+    indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
+  },
+  "mickey-e-miney": {
+    nome: "Mickey e Miney",
+    imagem: Brinquedos18,
+    material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
+    acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
+    garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
+    indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
+  },
+  "xicara-em-fibra": {
+    nome: "Xícara em Fibra",
+    imagem: Brinquedos19,
+    material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
+    acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
+    garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
+    indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
+  },
 };
 
 export function DetalhesAnimais() {
@@ -130,11 +211,11 @@ export function DetalhesAnimais() {
       <div className="max-w-5xl mx-auto px-6">
         
         {/* Navegação Superior Discreta */}
-        <Link to="/categorias/animais" className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-sky-600 hover:text-sky-700 transition-colors group mb-8">
+        <Link to="/categorias/brinquedos" className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-sky-600 hover:text-sky-700 transition-colors group mb-8">
           <svg className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
-          Voltar para a Linha Animais
+          Voltar para a Linha Brinquedos
         </Link>
 
         {/* Grid de Apresentação Técnica Compacta */}

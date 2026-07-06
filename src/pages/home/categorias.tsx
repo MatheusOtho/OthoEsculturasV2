@@ -110,7 +110,7 @@ export function Categorias() {
           {listaCategorias.map((categoria) => (
             <Link
               key={categoria.id}
-              to={`/${categoria.slug}`}
+              to={`/categorias/${categoria.slug}`}
               className={`
                 group relative overflow-hidden rounded-2xl bg-zinc-50 border border-zinc-100 p-5 flex flex-col justify-end transition-all duration-500 ease-out 
                 hover:border-sky-200 hover:shadow-[0_15px_30px_-10px_rgba(2,132,199,0.06)]

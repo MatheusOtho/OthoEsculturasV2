@@ -60,7 +60,7 @@ const LISTA_DESTAQUES: ItemDestaque[] = [
     categoria: "Mobiliário Comercial",
     imagem: Destaque5,
     altSEO: "Módulos circulares de fibra de vidro de alta resistência.",
-    linkDestino: "/categoria-moveis/modulo-circular"
+    linkDestino: "/categoria-brinquedos/modulo-circular"
   },
   {
     id: 6,

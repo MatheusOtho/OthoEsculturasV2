@@ -1,20 +1,29 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 
-import Animais1 from "../../../assets/categorias/animais/AbelhaEmFibra.jpg";
-import Animais2 from "../../../assets/categorias/animais/BoisNaCarroceria.jpg";
-import Animais3 from "../../../assets/categorias/animais/DinossauroEmFibra.jpg";
-import Animais4 from "../../../assets/categorias/animais/DinossauroTemático.jpg";
-import Animais5 from "../../../assets/categorias/animais/EsculturaDeBode.jpg";
-import Animais6 from "../../../assets/categorias/animais/GrupoDinossaurosEmFibra.jpg";
-import Animais7 from "../../../assets/categorias/animais/LeãoDetalhado.jpg";
-import Animais8 from "../../../assets/categorias/animais/NinhoDeArara.jpg";
-import Animais9 from "../../../assets/categorias/animais/PapagaioFeliz.jpg";
-import Animais10 from "../../../assets/categorias/animais/PinturaArtisticaElefante.jpg";
+import Brinquedos1 from "../../../assets/categorias/brinquedos/Baleia.jpg";
+import Brinquedos2 from "../../../assets/categorias/brinquedos/CapsulaDourada.jpg";
+import Brinquedos3 from "../../../assets/categorias/brinquedos/CavaloCarrossel.jpg";
+import Brinquedos4 from "../../../assets/categorias/brinquedos/EscorregaDino.jpg";
+import Brinquedos5 from "../../../assets/categorias/brinquedos/EscorregadorCurl.jpg";
+import Brinquedos6 from "../../../assets/categorias/brinquedos/EscorregadorMorango.jpg";
+import Brinquedos7 from "../../../assets/categorias/brinquedos/EscorregaSapo.jpg";
+import Brinquedos8 from "../../../assets/categorias/brinquedos/Foca.jpg";
+import Brinquedos9 from "../../../assets/categorias/brinquedos/FormigaEmFibra.jpg";
+import Brinquedos10 from "../../../assets/categorias/brinquedos/GangorraEmFibra.jpg";
+import Brinquedos11 from "../../../assets/categorias/brinquedos/Golfinhos.jpg";
+import Brinquedos12 from "../../../assets/categorias/brinquedos/MickeyeMiney.jpg";
+import Brinquedos13 from "../../../assets/categorias/brinquedos/MóduloCircular.jpg";
+import Brinquedos14 from "../../../assets/categorias/brinquedos/Playground.jpg";
+import Brinquedos15 from "../../../assets/categorias/brinquedos/PlaygroundEmFibra.jpg";
+import Brinquedos16 from "../../../assets/categorias/brinquedos/RinoceronteDeFibra.jpg";
+import Brinquedos17 from "../../../assets/categorias/brinquedos/Tubarão.jpg";
+import Brinquedos18 from "../../../assets/categorias/brinquedos/TúnelDeFibra.jpg";
+import Brinquedos19 from "../../../assets/categorias/brinquedos/XicaraEmFibra.jpg";
 
-import bannerAnimais from "../../../assets/categorias/animais/bannerAnimais.jpg";
+import bannerBrinquedos from "../../../assets/categorias/brinquedos/bannerBrinquedos.jpg"
 
-interface ItemAnimal {
+interface ItemBrinquedos {
   id: number;
   nome: string;
   slug: string;
@@ -24,83 +33,142 @@ interface ItemAnimal {
 
 type FiltroTipo = "todos" | "destaques";
 
-const LISTA_ANIMAIS: ItemAnimal[] = [
-  { id: 1, nome: "Abelha em Fibra", slug: "abelha-em-fibra", imagem: Animais1 },
+const LISTA_BRINQUEDOS: ItemBrinquedos[] = [
+  { 
+    id: 1, 
+    nome: "Escorrega da Baleia", 
+    slug: "escorrega-da-baleia", 
+    imagem: Brinquedos1
+  },
   {
     id: 2,
-    nome: "Bois na Carroceria",
-    slug: "bois-na-carroceria",
-    imagem: Animais2,
+    nome: "Capsúla Dourada",
+    slug: "capsula-dourada",
+    imagem: Brinquedos2,
     tag: "Destaque",
   },
   {
     id: 3,
-    nome: "Dinossauro em Fibra",
-    slug: "dinossauro-em-fibra",
-    imagem: Animais3,
+    nome: "Cavalo Carrossel",
+    slug: "cavalo-carrossel",
+    imagem: Brinquedos3,
   },
   {
     id: 4,
-    nome: "Dinossauro Temático",
-    slug: "dinossauro-tematico",
-    imagem: Animais4,
+    nome: "Escorrega do Dinossauro",
+    slug: "escorrega-do-dinossauro",
+    imagem: Brinquedos4,
   },
   {
     id: 5,
-    nome: "Escultura de Bode",
-    slug: "escultura-de-bode",
-    imagem: Animais5,
+    nome: "Escorregador Curl",
+    slug: "escorregador-curl",
+    imagem: Brinquedos5,
     tag: "Mais Visto",
   },
   {
     id: 6,
-    nome: "Grupo Dinossauros em Fibra",
-    slug: "grupo-dinossauros-em-fibra",
-    imagem: Animais6,
+    nome: "Escorregador Morango",
+    slug: "escorregador-morango",
+    imagem: Brinquedos6,
   },
   { 
     id: 7, 
-    nome: "Leão Detalhado", 
-    slug: "leao-detalhado", 
-    imagem: Animais7 
+    nome: "Escorrega do Sapo", 
+    slug: "escorrega-do-sapo", 
+    imagem: Brinquedos7 
   },
   { 
     id: 8, 
-    nome: "Ninho de Araras", 
-    slug: "ninho-de-araras", 
-    imagem: Animais8 
+    nome: "Gangorra da Foca", 
+    slug: "gangorra-da-foca", 
+    imagem: Brinquedos8 
   },
   { 
     id: 9, 
-    nome: "Papagaio Feliz", 
-    slug: "papagaio-feliz", 
-    imagem: Animais9 
+    nome: "Formiga em Fibra", 
+    slug: "formiga-em-fibra", 
+    imagem: Brinquedos9 
   },
   {
     id: 10,
-    nome: "Pintura Artística Elefante",
-    slug: "pintura-artistica-elefante",
-    imagem: Animais10,
+    nome: "Gangorra em Fibra",
+    slug: "gangorra-em-fibra",
+    imagem: Brinquedos10,
+  },
+  {
+    id: 11,
+    nome: "Golfinho em Fibra",
+    slug: "golfinho-em-fibra",
+    imagem: Brinquedos11,
+  },
+  {
+    id: 12,
+    nome: "Módulo Circular",
+    slug: "modulo-circular",
+    imagem: Brinquedos12,
+  },
+  {
+    id: 13,
+    nome: "Playground em Fibra",
+    slug: "playground-em-fibra",
+    imagem: Brinquedos13,
+  },
+  {
+    id: 14,
+    nome: "Playground em Fibra Modelo 2 ",
+    slug: "playground-em-fibra-modelo-2",
+    imagem: Brinquedos14,
+  },
+  {
+    id: 15,
+    nome: "Rinocerounte em Fibra ",
+    slug: "rinocerount-em-fibra",
+    imagem: Brinquedos15,
+  },
+  {
+    id: 16,
+    nome: "Tubarão em Fibra ",
+    slug: "tubarao-em-fibra",
+    imagem: Brinquedos16,
+  },
+  {
+    id: 17,
+    nome: "Túnel de Playground ",
+    slug: "tunel-de-playground",
+    imagem: Brinquedos17,
+  },
+  {
+    id: 18,
+    nome: "Mickey e Miney ",
+    slug: "mickey-e-miney",
+    imagem: Brinquedos18,
+  },
+  {
+    id: 19,
+    nome: "Xícara em Fibra ",
+    slug: "xicara-em-fibra",
+    imagem: Brinquedos19,
   },
 ];
 
-export function Animais() {
+export function Brinquedos() {
   const [filtroAtivo, setFiltroAtivo] = useState<FiltroTipo>("todos");
 
-  const animaisFiltrados = useMemo(() => {
-    return LISTA_ANIMAIS.filter((item) =>
+  const brinquedosFiltrados = useMemo(() => {
+    return LISTA_BRINQUEDOS.filter((item) =>
       filtroAtivo === "destaques" ? item.tag : true,
     );
   }, [filtroAtivo]);
 
   return (
-    <div className="animate-page-fade relative w-full min-h-screen bg-slate-50/40 overflow-hidden antialiased mb-20 selection:bg-sky-500/10">
+    <div className="animate-page-fade relative w-full min-h-screen mb-20 bg-slate-50/40 overflow-hidden antialiased selection:bg-sky-500/10">
 
       {/* Banner Superior Modificado */}
       <div className="w-full px-4 mx-auto mt-24 mb-12">
         <div className="w-full h-[200px] md:h-[350px] lg:h-[500px] rounded-2xl md:rounded-3xl overflow-hidden bg-zinc-100 shadow-sm border border-zinc-200/40">
           <img 
-            src={bannerAnimais}
+            src={bannerBrinquedos}
             alt="Catálogo Geral de Esculturas Temáticas em Fibra de Vidro"
             className="w-full h-full object-cover select-none pointer-events-none"
             loading="eager"
@@ -137,12 +205,12 @@ export function Animais() {
                 /
               </span>
               <span className="text-zinc-500 font-bold" aria-current="page">
-                Animais
+                Brinquedos
               </span>
             </nav>
 
             <h1 className="text-3xl md:text-5xl font-black tracking-tight text-zinc-950">
-              Linha Animais
+              Linha Brinquedos
             </h1>
 
             <p className="mt-4 text-sm md:text-base text-zinc-500 max-w-2xl font-normal leading-relaxed">
@@ -156,7 +224,7 @@ export function Animais() {
           <div
             className="flex flex-wrap gap-2 text-xs font-medium"
             role="tablist"
-            aria-label="Filtrar galeria de animais"
+            aria-label="Filtrar galeria de Brinquedos"
           >
             {(["todos", "destaques"] as FiltroTipo[]).map((tipo) => (
               <button
@@ -171,7 +239,7 @@ export function Animais() {
                 }`}
               >
                 {tipo === "todos"
-                  ? `Ver Todos (${LISTA_ANIMAIS.length})`
+                  ? `Ver Todos (${LISTA_BRINQUEDOS.length})`
                   : "Destaques"}
               </button>
             ))}
@@ -180,10 +248,10 @@ export function Animais() {
 
         {/* Grid de Produtos - Todo o Card é um Link */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-12 md:gap-x-6 md:gap-y-16">
-          {animaisFiltrados.map((item) => (
+          {brinquedosFiltrados.map((item) => (
             <Link
               key={item.id}
-              to={`/categoria-animais/${item.slug}`}
+              to={`/categoria-brinquedos/${item.slug}`}
               className="group relative flex flex-col rounded-3xl bg-white/[0.45] backdrop-blur-xl border border-white/80 p-3 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-white hover:border-white hover:-translate-y-1 hover:shadow-[0_32px_64px_-20px_rgba(14,165,233,0.14),inset_0_0_0_1px_rgba(14,165,233,0.03)]"
             >
               <article className="w-full flex flex-col">
@@ -250,4 +318,4 @@ export function Animais() {
   );
 }
 
-export default Animais;
+export default Brinquedos;
