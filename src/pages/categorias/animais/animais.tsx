@@ -58,9 +58,24 @@ const LISTA_ANIMAIS: ItemAnimal[] = [
     slug: "grupo-dinossauros-em-fibra",
     imagem: Animais6,
   },
-  { id: 7, nome: "Leão Detalhado", slug: "leao-detalhado", imagem: Animais7 },
-  { id: 8, nome: "Ninho de Arara", slug: "ninho-de-arara", imagem: Animais8 },
-  { id: 9, nome: "Papagaio Feliz", slug: "papagaio-feliz", imagem: Animais9 },
+  { 
+    id: 7, 
+    nome: "Leão Detalhado", 
+    slug: "leao-detalhado", 
+    imagem: Animais7 
+  },
+  { 
+    id: 8, 
+    nome: "Ninho de Araras", 
+    slug: "ninho-de-araras", 
+    imagem: Animais8 
+  },
+  { 
+    id: 9, 
+    nome: "Papagaio Feliz", 
+    slug: "papagaio-feliz", 
+    imagem: Animais9 
+  },
   {
     id: 10,
     nome: "Pintura Artística Elefante",
@@ -79,7 +94,7 @@ export function Animais() {
   }, [filtroAtivo]);
 
   return (
-    <div className="relative w-full min-h-screen bg-slate-50/40 overflow-hidden antialiased selection:bg-sky-500/10">
+    <div className="animate-page-fade relative w-full min-h-screen bg-slate-50/40 overflow-hidden antialiased selection:bg-sky-500/10">
 
       {/* Banner Superior Modificado */}
       <div className="w-full px-4 mx-auto mt-24 mb-12">

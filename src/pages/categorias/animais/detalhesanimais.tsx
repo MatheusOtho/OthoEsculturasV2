@@ -77,8 +77,8 @@ const ESPECIFICACOES_PRODUTOS: Record<string, DadosProduto> = {
     garantia: "Garantia premium contra descascamento e blindagem química para exposição solar contínua.",
     indicacao: "Pórticos de entrada, fachadas corporativas premium, condomínios fechados e zoológicos."
   },
-  "ninho-de-arara": {
-    nome: "Ninho de Arara",
+  "ninho-de-araras": {
+    nome: "Ninho de Araras",
     imagem: Animais8,
     material: "Compósito leve de fibra de vidro acoplado a resinas ecológicas de alta aderência.",
     acabamento: "Policromia viva simulando a fauna brasileira com finalização em verniz poliuretano fosco.",
@@ -111,7 +111,7 @@ export function DetalhesAnimais() {
 
   if (!produto) {
     return (
-      <div className="w-full min-h-screen flex flex-col items-center justify-center bg-slate-50 px-4">
+      <div className="animate-page-fade w-full min-h-screen flex flex-col items-center justify-center bg-slate-50 px-4">
         <h1 className="text-xl font-bold text-zinc-950">Produto não encontrado</h1>
         <p className="text-zinc-500 text-sm mt-1 mb-6">A peça que você está procurando não existe ou mudou de endereço.</p>
         <Link to="/animais" className="px-5 py-2.5 bg-sky-600 text-white rounded-xl text-sm font-bold shadow-sm hover:bg-sky-700 transition-colors">
@@ -126,7 +126,7 @@ export function DetalhesAnimais() {
   const linkWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${textoMensagem}`;
 
   return (
-    <div className="w-full min-h-screen bg-slate-50/30 text-zinc-900 antialiased py-26">
+    <div className="animate-page-fade w-full min-h-screen bg-slate-50/30 text-zinc-900 antialiased py-26">
       <div className="max-w-5xl mx-auto px-6">
         
         {/* Navegação Superior Discreta */}
@@ -199,7 +199,7 @@ export function DetalhesAnimais() {
 
               {/* Botão Secundário: Voltar para o Catálogo */}
               <Link
-                to="/animais"
+                to="/categorias/animais"
                 className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-white border border-zinc-200 hover:bg-zinc-50 text-zinc-800 rounded-xl text-sm font-bold shadow-sm transition-all text-center"
               >
                 Voltar para o Catálogo

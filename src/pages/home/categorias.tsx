@@ -77,9 +77,9 @@ const listaCategorias: CategoriaItem[] = [
   },
   { 
     id: 5, 
-    nome: "Natal", 
-    subtitulo: "Magia de fim de ano", 
-    slug: "natal", 
+    nome: "Temáticos", 
+    subtitulo: "Magia das datas comemorativas", 
+    slug: "tematicos", 
     imagem: imgCategoria5, 
     gridClass: "md:col-span-1 md:row-span-1 md:h-[150px]" 
   },
@@ -87,7 +87,7 @@ const listaCategorias: CategoriaItem[] = [
 
 export function Categorias() {
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 py-12 md:py-20 bg-white text-zinc-900 antialiased overflow-hidden">
+    <section className="w-full max-w-7xl mx-auto px-4 py-5 md:py-20 bg-white text-zinc-900 antialiased overflow-hidden">
       
       {/* Cabeçalho alinhado e compacto */}
       <div className="flex flex-col items-start mb-8 md:mb-8 max-w-2xl">

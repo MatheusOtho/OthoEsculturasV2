@@ -10,17 +10,16 @@ function Header() {
   // Itens de navegação principal
   const navItems = [
     { label: "Início", path: "/" },
-    { label: "Destaques", path: "/destaques" },
     { label: "Contato", path: "/contato" },
     { label: "Sobre Nós", path: "/sobrenos" },
   ];
 
   // Subcategorias estratégicas mapeadas com foco em SEO (Palavras-chave de cauda longa)
   const categoriasSEO = [
-    { label: "Animais", path: "/animais", desc: "Esculturas de animais em fibra de vidro." },
+    { label: "Animais", path: "/categorias/animais", desc: "Esculturas de animais em fibra de vidro." },
     { label: "Brinquedos", path: "/categorias/brinquedos", desc: "Peças em fibra de vidro." },
     { label: "Exclusivos", path: "/categorias/exclusivos", desc: "Esculturas exclusivas em fibra de vidro" },
-    { label: "Natalino", path: "/categorias/natal", desc: "Esculturas comemorativas de natal." },
+    { label: "Temáticos", path: "/categorias/natal", desc: "Esculturas comemorativas." },
     { label: "Paisagismo", path: "/categorias/paisagismo", desc: "Vasos, jardineiras e decorações únicas." },
     { label: "Realismo", path: "/categorias/realismo", desc: "Peças, obras e esculturas fabricadas em fibra de vidro." },
     { label: "Troféus", path: "/categorias/trofeus", desc: "Troféus personalizados em fibra de vidro." },
@@ -34,7 +33,7 @@ function Header() {
           
           {/* Logo Otimizada */}
           <Link 
-            to="/" 
+            to="/inicio" 
             className="flex items-center focus:outline-none"
             onClick={() => { setIsOpen(false); setIsCategoriesOpen(false); }}
             aria-label="Ir para a página inicial da Otho Esculturas"
@@ -54,7 +53,7 @@ function Header() {
               {/* Link de Início */}
               <li>
                 <Link
-                  to="/"
+                  to="/inicio"
                   className={`group relative py-1 text-sm font-medium transition-colors duration-200 block ${
                     location.pathname === "/" ? "text-sky-600" : "text-zinc-600 hover:text-zinc-900"
                   }`}

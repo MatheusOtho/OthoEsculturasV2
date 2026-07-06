@@ -1,6 +1,7 @@
 import Hero from ".//home/hero"
 import Carrossel from ".//home/carrossel"
 import Categorias from ".//home/categorias"
+import Destaques from ".//home/destaques"
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
         <Hero/>
         <Carrossel/>
         <Categorias/>
+        <Destaques/>
       </main>
     </>
   );
