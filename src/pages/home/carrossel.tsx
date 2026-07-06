@@ -90,14 +90,14 @@ export function Carrossel() {
       </div>
 
       {/* CONTAINER COM MÁSCARA DE GRADIENTE NAS BORDAS */}
-      <div className="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 sm:before:w-40 before:bg-gradient-to-r before:from-white before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 sm:after:w-40 after:bg-gradient-to-l after:from-white after:to-transparent">
+      <div className="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 sm:before:w-40 before:bg-gradient-to-r before:from-white/70 before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 sm:after:w-40 after:bg-gradient-to-l after:from-white/70 after:to-transparent">
         
         {/* Track de Animação */}
         <div className="flex w-max gap-[1px] animate-marquee hover:[animation-play-state:paused] py-4">
           {listaDuplicada.map((obra, index) => (
             <figure
               key={`${obra.id}-${index}`}
-              className="relative w-[340px] sm:w-[460px] md:w-[520px] aspect-video  overflow-hidden bg-zinc-50 border border-zinc-200/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-zinc-200/50 group select-none cursor-pointer"
+              className="relative w-[340px] sm:w-[460px] md:w-[520px] lg:w-[700px] aspect-video overflow-hidden bg-zinc-50 border border-zinc-200/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-zinc-200/50 group select-none cursor-pointer"
             >
               {/* Imagem indexável otimizada */}
               <img

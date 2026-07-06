@@ -14,9 +14,8 @@ import Animais10 from "../../../assets/categorias/animais/PinturaArtisticaElefan
 interface DadosProduto {
   nome: string;
   imagem: string;
-  material: string;
+  descricao: string;
   acabamento: string;
-  garantia: string;
   indicacao: string;
 }
 
@@ -24,81 +23,71 @@ const ESPECIFICACOES_PRODUTOS: Record<string, DadosProduto> = {
   "abelha-em-fibra": {
     nome: "Abelha em Fibra",
     imagem: Animais1,
-    material: "Resina leve reforçada com manta de fibra de vidro de alta resistência.",
+    descricao: "Escultura artística de abelha moldada em fibra de vidro de alta resistência e resina leve. Uma peça rica em detalhes anatômicos, ideal para agregar valor estético e destacar fachadas comerciais, projetos pedagógicos ou decorações de jardins.",
     acabamento: "Pintura artística manual fina com tintas acrílicas premium e proteção de verniz.",
-    garantia: "Garantia estrutural de fábrica com suporte técnico especializado e peças de reposição.",
     indicacao: "Jardins botânicos, apiários, fachadas de comércios de mel, escolas e eventos ecológicos."
   },
   "bois-na-carroceria": {
     nome: "Bois na Carroceria",
     imagem: Animais2,
-    material: "Composto laminado de fibra de vidro estrutural com alta densidade de resina ortoftálica.",
+    descricao: "Conjunto cenográfico robusto de bois esculpidos em fibra de vidro estrutural com alta densidade. Desenvolvido sob medida com foco na durabilidade para suportar movimentações e trepidações de transporte, sendo perfeito para ambientações temáticas do ramo agro.",
     acabamento: "Selamento de superfície em gelcoat e pintura automotiva fosca simulando texturas naturais.",
-    garantia: "Garantia estendida contra trincas estruturais causadas por trepidações em transporte.",
     indicacao: "Entradas de fazendas, decoração de churrascarias, feiras agropecuárias e cenografias sertanejas."
   },
   "dinossauro-em-fibra": {
     nome: "Dinossauro em Fibra de Vidro",
     imagem: Animais3,
-    material: "Manta e tecido de fibra de vidro estrutural envoltos em resina catalisada reforçada.",
+    descricao: "Réplica imponente de dinossauro em tamanho real fabricada com tecidos de fibra de vidro de engenharia avançada. Conta com uma modelagem de altíssimo impacto visual e estabilidade estrutural certificada, feita para ser a atração principal de grandes centros de entretenimento.",
     acabamento: "Texturização artística epidérmica realista com acabamento em verniz PU fosco anti-UV.",
-    garantia: "Homologação estrutural com laudo técnico de estabilidade e segurança física.",
     indicacao: "Parques temáticos, resorts, playgrounds de alto padrão e centros de entretenimento."
   },
   "dinossauro-tematico": {
     nome: "Dinossauro Temático",
     imagem: Animais4,
-    material: "Fibra de vidro laminada com acabamento liso flexível para contornos complexos.",
+    descricao: "Escultura decorativa de dinossauro com traços lúdicos e contornos flexíveis em fibra de vidro laminada. Suas cores vibrantes e acabamento impecável criam o cenário instagramável perfeito, atraindo a atenção e encantando o público infantil.",
     acabamento: "Pintura artística personalizada com cores vibrantes e selador acrílico de alta vedação.",
-    garantia: "Suporte completo contra intempéries climáticas e proteção cromática de alta durabilidade.",
     indicacao: "Buffets infantis, fachadas comerciais lúdicas, lojas de brinquedos e áreas de fotos (instagramável)."
   },
   "escultura-de-bode": {
     nome: "Escultura de Bode",
     imagem: Animais5,
-    material: "Resina poliéster reforçada com fibra de vidro texturizada.",
+    descricao: "Peça decorativa de bode moldada com resina poliéster e fibra texturizada. A obra exibe uma replicação minuciosa e realista das características animais, sendo altamente resistente à umidade extrema e ideal para compor decorações rústicas ou exposições.",
     acabamento: "Escultura com replicação minuciosa de pelagem e chifres através de pintura automotiva e aerografia.",
-    garantia: "Garantia total de fábrica com tratamento especial contra umidade severa e radiação UV.",
     indicacao: "Exposições agrícolas, fazendas boutique, decoração de restaurantes rústicos e cenários teatrais."
   },
   "grupo-dinossauros-em-fibra": {
     nome: "Grupo Dinossauros em Fibra",
     imagem: Animais6,
-    material: "Sistemas complexos de laminação de fibra de vidro com espessuras calibradas para grandes volumes.",
+    descricao: "Complexo cenográfico de dinossauros fabricados com espessuras calibradas de fibra de vidro para suportar grandes volumes e exposição contínua ao tempo. Um projeto de escala corporativa sob medida para transformar espaços públicos e atrações turísticas.",
     acabamento: "Pintura artística integrada em lote para uniformidade visual do conjunto, com selante de alto tráfego.",
-    garantia: "Acompanha manual de içamento logístico seguro e garantia estendida de projeto corporativo.",
     indicacao: "Praças públicas, rotatórias urbanas, museus de história natural abertos e mega atrações turísticas."
   },
   "leao-detalhado": {
     nome: "Leão Detalhado",
     imagem: Animais7,
-    material: "Fibra de vidro de engenharia avançada moldada sob matrizes de altíssima definição anatômica.",
+    descricao: "Escultura majestosa de leão desenvolvida sob matrizes de altíssima definição anatômica em fibra de vidro. Entrega uma imponência realista incomparável e conta com blindagem química automotiva para decoração de fachadas comerciais e pórticos de alto padrão.",
     acabamento: "Pintura em multicamadas cromáticas realistas e revestimento com verniz automotivo premium.",
-    garantia: "Garantia premium contra descascamento e blindagem química para exposição solar contínua.",
     indicacao: "Pórticos de entrada, fachadas corporativas premium, condomínios fechados e zoológicos."
   },
   "ninho-de-araras": {
     nome: "Ninho de Araras",
     imagem: Animais8,
-    material: "Compósito leve de fibra de vidro acoplado a resinas ecológicas de alta aderência.",
+    descricao: "Escultura decorativa com araras brasileiras modeladas em compósito leve de fibra de vidro e resinas de alta aderência. Uma peça colorida e rica que celebra a fauna nacional, protegida biologicamente contra fungos e intempéries climáticas.",
     acabamento: "Policromia viva simulando a fauna brasileira com finalização em verniz poliuretano fosco.",
-    garantia: "Proteção biológica total integrada (100% imune a fungos, cupins ou apodrecimento).",
     indicacao: "Hotéis fazenda, áreas de preservação ambiental, receptivos turísticos e decorações tropicais."
   },
   "papagaio-feliz": {
     nome: "Papagaio Feliz",
     imagem: Animais9,
-    material: "Fibra de vidro injetada com resinas flexíveis, garantindo leveza e ótima resistência estrutural.",
+    descricao: "Peça alegre e irreverente de papagaio moldada em fibra de vidro injetada leve. Desenvolvida especialmente com foco na versatilidade de instalação para projetos decorativos aéreos ou suspensos, mantendo o brilho de suas cores sob o sol ou chuva.",
     acabamento: "Pintura decorativa de alto brilho com pigmentos puros que bloqueiam o desbotamento solar.",
-    garantia: "Suporte técnico para projetos de ancoragem suspensa em troncos ou estruturas aéreas.",
-    indicacao: "Quiosques, pet shops, parques aquáticos, áreas de lazer residenciais e lanchonetes de praia."
+    indicacao: "Quiosques, pet shops, parks aquáticos, áreas de lazer residenciais e lanchonetes de praia."
   },
   "pintura-artistica-elefante": {
     nome: "Pintura Artística Elefante",
     imagem: Animais10,
-    material: "Fibra de vidro maciça nas extremidades estruturais e corpo em laminação espessa de alta densidade.",
+    descricao: "Escultura contemporânea de elefante produzida com laminação espessa e extremidades maciças em fibra de vidro. Serve como uma autêntica tela tridimensional com acabamento vitrificado antirriscos, excelente para exposições de arte e saguões comerciais de luxo.",
     acabamento: "Pintura artística contemporânea estilizada, selada com verniz vitrificado de altíssima resistência a riscos.",
-    garantia: "Garantia especial para superfícies de alto contato físico em áreas de grande fluxo de público.",
     indicacao: "Exposições de arte urbana, saguões de hotéis de luxo, shopping centers e museus modernos."
   }
 };
@@ -114,14 +103,14 @@ export function DetalhesAnimais() {
       <div className="animate-page-fade w-full min-h-screen flex flex-col items-center justify-center bg-slate-50 px-4">
         <h1 className="text-xl font-bold text-zinc-950">Produto não encontrado</h1>
         <p className="text-zinc-500 text-sm mt-1 mb-6">A peça que você está procurando não existe ou mudou de endereço.</p>
-        <Link to="/animais" className="px-5 py-2.5 bg-sky-600 text-white rounded-xl text-sm font-bold shadow-sm hover:bg-sky-700 transition-colors">
+        <Link to="/categorias/animais" className="px-5 py-2.5 bg-sky-600 text-white rounded-xl text-sm font-bold shadow-sm hover:bg-sky-700 transition-colors">
           Voltar para o Catálogo
         </Link>
       </div>
     );
   }
 
-  const numeroWhatsapp = "5511946822225"; // Insira aqui o seu número com DDD
+  const numeroWhatsapp = "5511946822225"; 
   const textoMensagem = encodeURIComponent(`Olá, gostaria de conversar sobre ${produto.nome}`);
   const linkWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${textoMensagem}`;
 
@@ -137,7 +126,7 @@ export function DetalhesAnimais() {
           Voltar para a Linha Animais
         </Link>
 
-        {/* Grid de Apresentação Técnica Compacta */}
+        {/* Grid de Apresentação Técnica */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start">
           
           {/* Coluna Esquerda: Imagem */}
@@ -150,41 +139,34 @@ export function DetalhesAnimais() {
             />
           </div>
 
-          {/* Coluna Direita: Título + Mini Grid de Specs + Ações */}
+          {/* Coluna Direita: Título + Descrição Comercial + Especificações */}
           <div className="lg:col-span-7 flex flex-col pt-1">
             
-            <header className="mb-6">
-              <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest block mb-1">Ficha Técnica Oficial</span>
+            <header className="mb-4">
+              <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest block mb-1">Catálogo Exclusivo</span>
               <h1 className="text-2xl md:text-4xl font-black tracking-tight text-zinc-950">{produto.nome}</h1>
             </header>
 
-            {/* Layout Compacto em Grid de 2 Colunas */}
-            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5 border-t border-b border-zinc-200/60 py-6 mb-6">
-              
-              <div className="flex flex-col gap-0.5">
-                <dt className="text-[11px] font-black uppercase tracking-wider text-zinc-400">Composição</dt>
-                <dd className="text-xs md:text-sm text-zinc-600 font-normal leading-relaxed">{produto.material}</dd>
-              </div>
+            {/* Descrição de Produto Fluida */}
+            <p className="text-sm md:text-base text-zinc-600 leading-relaxed font-medium mb-6">
+              {produto.descricao}
+            </p>
 
+            {/* Grid Técnico Compacto (Apenas Acabamento e Indicações) */}
+            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5 border-t border-b border-zinc-200/60 py-6 mb-6">
               <div className="flex flex-col gap-0.5">
                 <dt className="text-[11px] font-black uppercase tracking-wider text-zinc-400">Acabamento</dt>
                 <dd className="text-xs md:text-sm text-zinc-600 font-normal leading-relaxed">{produto.acabamento}</dd>
               </div>
 
               <div className="flex flex-col gap-0.5 pt-3 border-t border-zinc-100 sm:border-none sm:pt-0">
-                <dt className="text-[11px] font-black uppercase tracking-wider text-zinc-400">Garantia & Suporte</dt>
-                <dd className="text-xs md:text-sm text-zinc-600 font-normal leading-relaxed">{produto.garantia}</dd>
-              </div>
-
-              <div className="flex flex-col gap-0.5 pt-3 border-t border-zinc-100 sm:border-none sm:pt-0">
-                <dt className="text-[11px] font-black uppercase tracking-wider text-zinc-400">Aplicações</dt>
+                <dt className="text-[11px] font-black uppercase tracking-wider text-zinc-400">Aplicações Recomendadas</dt>
                 <dd className="text-xs md:text-sm text-zinc-600 font-normal leading-relaxed">{produto.indicacao}</dd>
               </div>
             </dl>
 
             {/* Bloco de Ações Verticais */}
             <div className="flex flex-col gap-3">
-              {/* Botão Principal: WhatsApp */}
               <a 
                 href={linkWhatsapp}
                 target="_blank"
@@ -197,7 +179,6 @@ export function DetalhesAnimais() {
                 Solicitar Orçamento no WhatsApp
               </a>
 
-              {/* Botão Secundário: Voltar para o Catálogo */}
               <Link
                 to="/categorias/animais"
                 className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-white border border-zinc-200 hover:bg-zinc-50 text-zinc-800 rounded-xl text-sm font-bold shadow-sm transition-all text-center"
