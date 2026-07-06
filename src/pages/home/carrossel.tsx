@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import Carrossel1 from "../../assets/home/carrosselhome/carrossel1.png";
 import Carrossel2 from "../../assets/home/carrosselhome/carrossel2.png";
