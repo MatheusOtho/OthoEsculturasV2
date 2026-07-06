@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+@layer utilities {
+  /* Classe de animação para aplicar nas páginas */
+  .animate-page-fade {
+    animation: pageFadeIn 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+    will-change: opacity, transform;
+  }
+}
+
+/* Definição dos Keyframes otimizada para performance */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
