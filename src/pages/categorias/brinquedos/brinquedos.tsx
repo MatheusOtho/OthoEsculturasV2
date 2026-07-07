@@ -196,7 +196,7 @@ export function Brinquedos() {
               aria-label="Breadcrumb"
             >
               <Link
-                to="/categorias"
+                to="/"
                 className="hover:text-sky-700 transition-colors duration-200 focus:outline-none focus:underline"
               >
                 Coleções

@@ -1,20 +1,16 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 
-import Animais1 from "../../../assets/categorias/animais/AbelhaEmFibra.jpg";
-import Animais2 from "../../../assets/categorias/animais/BoisNaCarroceria.jpg";
-import Animais3 from "../../../assets/categorias/animais/DinossauroEmFibra.jpg";
-import Animais4 from "../../../assets/categorias/animais/DinossauroTemático.jpg";
-import Animais5 from "../../../assets/categorias/animais/EsculturaDeBode.jpg";
-import Animais6 from "../../../assets/categorias/animais/GrupoDinossaurosEmFibra.jpg";
-import Animais7 from "../../../assets/categorias/animais/LeãoDetalhado.jpg";
-import Animais8 from "../../../assets/categorias/animais/NinhoDeArara.jpg";
-import Animais9 from "../../../assets/categorias/animais/PapagaioFeliz.jpg";
-import Animais10 from "../../../assets/categorias/animais/PinturaArtisticaElefante.jpg";
+import Paisagismo1 from "../../../assets/categorias/paisagismo/FloreiraEmFibra.jpg"
+import Paisagismo2 from "../../../assets/categorias/paisagismo/JardineiraEmFibra.jpg"
+import Paisagismo3 from "../../../assets/categorias/paisagismo/JardineiraModelo2.jpg"
+import Paisagismo4 from "../../../assets/categorias/paisagismo/LixeiraComDuplaFunção.jpg"
+import Paisagismo5 from "../../../assets/categorias/paisagismo/VasosCilindricos.jpg"
+import Paisagismo6 from "../../../assets/categorias/paisagismo/VasosGeométricos.jpg"
 
-import bannerAnimais from "../../../assets/categorias/animais/bannerAnimais.jpg";
+import bannerPaisagismo from "../../../assets/categorias/paisagismo/bannerPaisagismo.jpg"
 
-interface ItemAnimal {
+interface itemPaisagismo {
   id: number;
   nome: string;
   slug: string;
@@ -24,83 +20,65 @@ interface ItemAnimal {
 
 type FiltroTipo = "todos" | "destaques";
 
-const LISTA_ANIMAIS: ItemAnimal[] = [
-  { id: 1, nome: "Abelha em Fibra", slug: "abelha-em-fibra", imagem: Animais1 },
+const LISTA_PAISAGISMO: itemPaisagismo[] = [
+  { 
+    id: 1, 
+    nome: "Floreira em Fibra", 
+    slug: "floreira-em-fibra", 
+    imagem: Paisagismo1
+  },
   {
     id: 2,
-    nome: "Bois na Carroceria",
-    slug: "bois-na-carroceria",
-    imagem: Animais2,
+    nome: "Jardineira em Fibra",
+    slug: "jardineira-em-fibra",
+    imagem: Paisagismo2,
     tag: "Destaque",
   },
   {
     id: 3,
-    nome: "Dinossauro em Fibra",
-    slug: "dinossauro-em-fibra",
-    imagem: Animais3,
+    nome: "Jardineira Modelo 2",
+    slug: "jardineira-modelo-2",
+    imagem: Paisagismo3,
   },
   {
     id: 4,
-    nome: "Dinossauro Temático",
-    slug: "dinossauro-tematico",
-    imagem: Animais4,
+    nome: "Lixeira Dupla Função",
+    slug: "lixeira-dupla-funcao",
+    imagem: Paisagismo4,
   },
   {
     id: 5,
-    nome: "Escultura de Bode",
-    slug: "escultura-de-bode",
-    imagem: Animais5,
+    nome: "Vasos Cilíndricos em Fibra",
+    slug: "vasos-cilindricos-em-fibra",
+    imagem: Paisagismo5,
     tag: "Mais Visto",
   },
   {
     id: 6,
-    nome: "Grupo Dinossauros em Fibra",
-    slug: "grupo-dinossauros-em-fibra",
-    imagem: Animais6,
-  },
-  { 
-    id: 7, 
-    nome: "Leão Detalhado", 
-    slug: "leao-detalhado", 
-    imagem: Animais7 
-  },
-  { 
-    id: 8, 
-    nome: "Ninho de Araras", 
-    slug: "ninho-de-araras", 
-    imagem: Animais8 
-  },
-  { 
-    id: 9, 
-    nome: "Papagaio Feliz", 
-    slug: "papagaio-feliz", 
-    imagem: Animais9 
-  },
-  {
-    id: 10,
-    nome: "Pintura Artística Elefante",
-    slug: "pintura-artistica-elefante",
-    imagem: Animais10,
+    nome: "Vasos Geométricos em Fibra",
+    slug: "vasos-geometricos-em-fibra",
+    imagem: Paisagismo6,
+    tag: "Mais Visto",
   },
 ];
 
-export function Animais() {
+export function Paisagismo() {
   const [filtroAtivo, setFiltroAtivo] = useState<FiltroTipo>("todos");
 
-  const animaisFiltrados = useMemo(() => {
-    return LISTA_ANIMAIS.filter((item) =>
+  const paisagismoFiltrados = useMemo(() => {
+    return LISTA_PAISAGISMO.filter((item) =>
       filtroAtivo === "destaques" ? item.tag : true,
     );
   }, [filtroAtivo]);
 
   return (
-    <div className="animate-page-fade relative w-full min-h-screen bg-slate-50/40 overflow-hidden antialiased mb-20 selection:bg-sky-500/10">
+    <div className="animate-page-fade relative w-full min-h-screen mb-20 bg-slate-50/40 overflow-hidden antialiased selection:bg-sky-500/10">
 
       {/* Banner Superior Modificado */}
       <div className="w-full px-4 mx-auto mt-24 mb-12">
         <div className="w-full h-[200px] md:h-[350px] lg:h-[500px] rounded-2xl md:rounded-3xl overflow-hidden bg-zinc-100 shadow-sm border border-zinc-200/40">
           <img 
-            src={bannerAnimais}
+            src={bannerPaisagismo}
             alt="Catálogo Geral de Esculturas Temáticas em Fibra de Vidro"
             className="w-full h-full object-cover select-none pointer-events-none"
             loading="eager"
@@ -137,12 +115,12 @@ export function Animais() {
                 /
               </span>
               <span className="text-zinc-500 font-bold" aria-current="page">
-                Animais
+                Paisagismo
               </span>
             </nav>
 
             <h1 className="text-3xl md:text-5xl font-black tracking-tight text-zinc-950">
-              Linha Animais
+              Linha Paisagismo
             </h1>
 
             <p className="mt-4 text-sm md:text-base text-zinc-500 max-w-2xl font-normal leading-relaxed">
@@ -156,7 +134,7 @@ export function Animais() {
           <div
             className="flex flex-wrap gap-2 text-xs font-medium"
             role="tablist"
-            aria-label="Filtrar galeria de animais"
+            aria-label="Filtrar galeria de Paisagismo"
           >
             {(["todos", "destaques"] as FiltroTipo[]).map((tipo) => (
               <button
@@ -171,7 +149,7 @@ export function Animais() {
                 }`}
               >
                 {tipo === "todos"
-                  ? `Ver Todos (${LISTA_ANIMAIS.length})`
+                  ? `Ver Todos (${LISTA_PAISAGISMO.length})`
                   : "Destaques"}
               </button>
             ))}
@@ -180,10 +158,10 @@ export function Animais() {
 
         {/* Grid de Produtos - Todo o Card é um Link */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-12 md:gap-x-6 md:gap-y-16">
-          {animaisFiltrados.map((item) => (
+          {paisagismoFiltrados.map((item) => (
             <Link
               key={item.id}
-              to={`/categoria-animais/${item.slug}`}
+              to={`/categoria-paisagismo/${item.slug}`}
               className="group relative flex flex-col rounded-3xl bg-white/[0.45] backdrop-blur-xl border border-white/80 p-3 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-white hover:border-white hover:-translate-y-1 hover:shadow-[0_32px_64px_-20px_rgba(14,165,233,0.14),inset_0_0_0_1px_rgba(14,165,233,0.03)]"
             >
               <article className="w-full flex flex-col">
@@ -250,4 +228,4 @@ export function Animais() {
   );
 }
 
-export default Animais;
+export default Paisagismo;

@@ -10,6 +10,12 @@ import Animais from "./pages/categorias/animais/animais";
 import DetalheAnimais from "./pages/categorias/animais/detalhesanimais";
 import Brinquedos from "./pages/categorias/brinquedos/brinquedos";
 import DetalheBrinquedos from "./pages/categorias/brinquedos/detalhesbrinquedos";
+import Exclusivos from "./pages/categorias/exclusivos/exclusivos"
+import DetalheExclusivos from "./pages/categorias/exclusivos/detalhesexclusivos"
+import Moveis from "./pages/categorias/moveis/moveis"
+import DetalheMoveis from "./pages/categorias/moveis/detalhesmoveis"
+import Paisagismo from "./pages/categorias/paisagismo/paisagismo"
+import DetalhePaisagismo from "./pages/categorias/paisagismo/detalhespaisagismo"
 
 function App() {
   return (
@@ -26,6 +32,12 @@ function App() {
           <Route path="/categoria-animais/:slug" element={<DetalheAnimais />} />
           <Route path="/categorias/brinquedos" element={<Brinquedos />} />
           <Route path="/categoria-brinquedos/:slug" element={<DetalheBrinquedos />} />
+          <Route path="/categorias/exclusivos" element={<Exclusivos />} />
+          <Route path="/categoria-exclusivos/:slug" element={<DetalheExclusivos />} />
+          <Route path="/categorias/moveis" element={<Moveis />} />
+          <Route path="/categoria-moveis/:slug" element={<DetalheMoveis />} />
+          <Route path="/categorias/paisagismo" element={<Paisagismo />} />
+          <Route path="/categoria-paisagismo/:slug" element={<DetalhePaisagismo />} />
         </Routes>      
       <Footer />     
     </BrowserRouter>

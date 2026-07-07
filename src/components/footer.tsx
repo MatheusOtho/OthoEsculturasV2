@@ -28,7 +28,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm text-zinc-500 leading-relaxed max-w-sm font-medium">
-              Mais de 12 anos desenvolvendo peças e esculturas em fibra de vidro. Projetos de excelência e qualidade.
+              Mais de 12 anos desenvolvendo peças e esculturas em fibra de vidro e projetos com excelência e qualidade.
             </p>
           </div>
 

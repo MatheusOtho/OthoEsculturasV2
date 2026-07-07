@@ -19,9 +19,10 @@ function Header() {
     { label: "Animais", path: "/categorias/animais", desc: "Esculturas de animais em fibra de vidro." },
     { label: "Brinquedos", path: "/categorias/brinquedos", desc: "Peças em fibra de vidro." },
     { label: "Exclusivos", path: "/categorias/exclusivos", desc: "Esculturas exclusivas em fibra de vidro" },
-    { label: "Temáticos", path: "/categorias/natal", desc: "Esculturas comemorativas." },
+    { label: "Móveis", path: "/categorias/moveis", desc: "Móveis em fibra de vidro." },
     { label: "Paisagismo", path: "/categorias/paisagismo", desc: "Vasos, jardineiras e decorações únicas." },
     { label: "Realismo", path: "/categorias/realismo", desc: "Peças, obras e esculturas fabricadas em fibra de vidro." },
+    { label: "Temáticos", path: "/categorias/tematicos", desc: "Esculturas comemorativas." },
     { label: "Troféus", path: "/categorias/trofeus", desc: "Troféus personalizados em fibra de vidro." },
   ];
 

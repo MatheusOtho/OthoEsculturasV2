@@ -1,20 +1,20 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 
-import Animais1 from "../../../assets/categorias/animais/AbelhaEmFibra.jpg";
-import Animais2 from "../../../assets/categorias/animais/BoisNaCarroceria.jpg";
-import Animais3 from "../../../assets/categorias/animais/DinossauroEmFibra.jpg";
-import Animais4 from "../../../assets/categorias/animais/DinossauroTemático.jpg";
-import Animais5 from "../../../assets/categorias/animais/EsculturaDeBode.jpg";
-import Animais6 from "../../../assets/categorias/animais/GrupoDinossaurosEmFibra.jpg";
-import Animais7 from "../../../assets/categorias/animais/LeãoDetalhado.jpg";
-import Animais8 from "../../../assets/categorias/animais/NinhoDeArara.jpg";
-import Animais9 from "../../../assets/categorias/animais/PapagaioFeliz.jpg";
-import Animais10 from "../../../assets/categorias/animais/PinturaArtisticaElefante.jpg";
+import Moveis1 from "../../../assets/categorias/moveis/BalcãoModerno.jpg"
+import Moveis2 from "../../../assets/categorias/moveis/BancoMoon.jpg"
+import Moveis3 from "../../../assets/categorias/moveis/BancoTablet.jpg"
+import Moveis4 from "../../../assets/categorias/moveis/CadeiraEróticaKiss.jpg"
+import Moveis5 from "../../../assets/categorias/moveis/CadeiraEróticaSpicy.jpg"
+import Moveis6 from "../../../assets/categorias/moveis/MesaEmCone.jpg"
+import Moveis7 from "../../../assets/categorias/moveis/MesaGeométrica.jpg"
+import Moveis8 from "../../../assets/categorias/moveis/PoltronaLiving.jpg"
+import Moveis9 from "../../../assets/categorias/moveis/PoltronaQuite.jpg"
+import Moveis10 from "../../../assets/categorias/moveis/PoltronaStone.jpg"
 
-import bannerAnimais from "../../../assets/categorias/animais/bannerAnimais.jpg";
+import bannerMoveis from "../../../assets/categorias/moveis/bannerMoveis.jpg"
 
-interface ItemAnimal {
+interface itemMoveis {
   id: number;
   nome: string;
   slug: string;
@@ -24,83 +24,94 @@ interface ItemAnimal {
 
 type FiltroTipo = "todos" | "destaques";
 
-const LISTA_ANIMAIS: ItemAnimal[] = [
-  { id: 1, nome: "Abelha em Fibra", slug: "abelha-em-fibra", imagem: Animais1 },
+const LISTA_MOVEIS: itemMoveis[] = [
+  { 
+    id: 1, 
+    nome: "Balcão em Fibra", 
+    slug: "balcao-em-fibra", 
+    imagem: Moveis1
+  },
   {
     id: 2,
-    nome: "Bois na Carroceria",
-    slug: "bois-na-carroceria",
-    imagem: Animais2,
+    nome: "Banco Moon em Fibra",
+    slug: "banco-moon-em-fibra",
+    imagem: Moveis2,
     tag: "Destaque",
   },
   {
     id: 3,
-    nome: "Dinossauro em Fibra",
-    slug: "dinossauro-em-fibra",
-    imagem: Animais3,
+    nome: "Banco Tablet em Fibra",
+    slug: "banco-tablet-em-fibra",
+    imagem: Moveis3,
   },
   {
     id: 4,
-    nome: "Dinossauro Temático",
-    slug: "dinossauro-tematico",
-    imagem: Animais4,
+    nome: "Cadeira Erótica Modelo Kiss",
+    slug: "cadeira-erotica-modelo-kiss",
+    imagem: Moveis4,
   },
   {
     id: 5,
-    nome: "Escultura de Bode",
-    slug: "escultura-de-bode",
-    imagem: Animais5,
+    nome: "Cadeira Erótica Modelo Spicy",
+    slug: "cadeira-erotica-modelo-spicy",
+    imagem: Moveis5,
     tag: "Mais Visto",
   },
   {
     id: 6,
-    nome: "Grupo Dinossauros em Fibra",
-    slug: "grupo-dinossauros-em-fibra",
-    imagem: Animais6,
+    nome: "Mesa com Base em Cone",
+    slug: "mesa-com-base-em-cone",
+    imagem: Moveis6,
+    tag: "Mais Visto",
   },
-  { 
-    id: 7, 
-    nome: "Leão Detalhado", 
-    slug: "leao-detalhado", 
-    imagem: Animais7 
+  {
+    id: 7,
+    nome: "Mesa Geométrica",
+    slug: "mesa-geometrica",
+    imagem: Moveis7,
+    tag: "Mais Visto",
   },
-  { 
-    id: 8, 
-    nome: "Ninho de Araras", 
-    slug: "ninho-de-araras", 
-    imagem: Animais8 
+  {
+    id: 8,
+    nome: "Poltrona Living",
+    slug: "poltrona-living",
+    imagem: Moveis8,
+    tag: "Mais Visto",
   },
-  { 
-    id: 9, 
-    nome: "Papagaio Feliz", 
-    slug: "papagaio-feliz", 
-    imagem: Animais9 
+  {
+    id: 9,
+    nome: "Poltrona Quite",
+    slug: "poltrona-quite",
+    imagem: Moveis9,
+    tag: "Mais Visto",
   },
   {
     id: 10,
-    nome: "Pintura Artística Elefante",
-    slug: "pintura-artistica-elefante",
-    imagem: Animais10,
+    nome: "Poltrona Stone",
+    slug: "poltrona-stone",
+    imagem: Moveis10,
+    tag: "Mais Visto",
   },
+  
 ];
 
-export function Animais() {
+export function Moveis() {
   const [filtroAtivo, setFiltroAtivo] = useState<FiltroTipo>("todos");
 
-  const animaisFiltrados = useMemo(() => {
-    return LISTA_ANIMAIS.filter((item) =>
+  const moveisFiltrados = useMemo(() => {
+    return LISTA_MOVEIS.filter((item) =>
       filtroAtivo === "destaques" ? item.tag : true,
     );
   }, [filtroAtivo]);
 
   return (
-    <div className="animate-page-fade relative w-full min-h-screen bg-slate-50/40 overflow-hidden antialiased mb-20 selection:bg-sky-500/10">
+    <div className="animate-page-fade relative w-full min-h-screen mb-20 bg-slate-50/40 overflow-hidden antialiased selection:bg-sky-500/10">
 
       {/* Banner Superior Modificado */}
       <div className="w-full px-4 mx-auto mt-24 mb-12">
         <div className="w-full h-[200px] md:h-[350px] lg:h-[500px] rounded-2xl md:rounded-3xl overflow-hidden bg-zinc-100 shadow-sm border border-zinc-200/40">
           <img 
-            src={bannerAnimais}
+            src={bannerMoveis}
             alt="Catálogo Geral de Esculturas Temáticas em Fibra de Vidro"
             className="w-full h-full object-cover select-none pointer-events-none"
             loading="eager"
@@ -137,12 +148,12 @@ export function Animais() {
                 /
               </span>
               <span className="text-zinc-500 font-bold" aria-current="page">
-                Animais
+                Móveis
               </span>
             </nav>
 
             <h1 className="text-3xl md:text-5xl font-black tracking-tight text-zinc-950">
-              Linha Animais
+              Linha Móveis
             </h1>
 
             <p className="mt-4 text-sm md:text-base text-zinc-500 max-w-2xl font-normal leading-relaxed">
@@ -156,7 +167,7 @@ export function Animais() {
           <div
             className="flex flex-wrap gap-2 text-xs font-medium"
             role="tablist"
-            aria-label="Filtrar galeria de animais"
+            aria-label="Filtrar galeria de Móveis"
           >
             {(["todos", "destaques"] as FiltroTipo[]).map((tipo) => (
               <button
@@ -171,7 +182,7 @@ export function Animais() {
                 }`}
               >
                 {tipo === "todos"
-                  ? `Ver Todos (${LISTA_ANIMAIS.length})`
+                  ? `Ver Todos (${LISTA_MOVEIS.length})`
                   : "Destaques"}
               </button>
             ))}
@@ -180,10 +191,10 @@ export function Animais() {
 
         {/* Grid de Produtos - Todo o Card é um Link */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-12 md:gap-x-6 md:gap-y-16">
-          {animaisFiltrados.map((item) => (
+          {moveisFiltrados.map((item) => (
             <Link
               key={item.id}
-              to={`/categoria-animais/${item.slug}`}
+              to={`/categoria-moveis/${item.slug}`}
               className="group relative flex flex-col rounded-3xl bg-white/[0.45] backdrop-blur-xl border border-white/80 p-3 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-white hover:border-white hover:-translate-y-1 hover:shadow-[0_32px_64px_-20px_rgba(14,165,233,0.14),inset_0_0_0_1px_rgba(14,165,233,0.03)]"
             >
               <article className="w-full flex flex-col">
@@ -250,4 +261,4 @@ export function Animais() {
   );
 }
 
-export default Animais;
+export default Moveis;
